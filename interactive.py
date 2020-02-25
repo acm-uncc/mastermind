@@ -11,7 +11,10 @@ def interactive(game: Game):
     while True:
         guess = input('> ')
 
-        right, wrong = game.check(guess)
+        right, wrong = game.check(guess)  # inform your next guess with these
+        # right: red pegs. Right color, right position.
+        # wrong: white pegs. Right color, wrong position
+
         print('{} red, {} white'.format(right, wrong))
 
         if right == length:
